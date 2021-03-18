@@ -2,9 +2,9 @@ seeder:
  file: ./seeder/seeder.rb
  disabled: false 
 parsers:
-  - file: ./parsers/listings.rb
-    page_type: listings
+  - page_type: listings 
+    file: ./parsers/listings.rb
     disabled: false
-  - file: ./parsers/products.rb
-    page_type: products
+  - page_type: products 
+    file: ./parsers/products.rb
     disabled: false
