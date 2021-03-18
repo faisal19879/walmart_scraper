@@ -10,7 +10,7 @@ product['title'] = nokogiri.at_css('.ProductTitle').text.strip
 product['current_price'] = nokogiri.at_css('span.price-characteristic').attr('content').to_f
 
 #extract original price
-original_price_div = nokogiri.at_css('.price-old')
+original_price_div = nokogiri.at_css('.price .visuallyhidden')
 original_price = original_price_div ? original_price_div.text.strip.gsub('$','').to_f : nil
 product['original_price'] = original_price == 0.0 ? nil : original_price
 
