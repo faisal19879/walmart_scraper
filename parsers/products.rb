@@ -4,7 +4,7 @@ nokogiri = Nokogiri.HTML(content)
 product = {}
 
 #extract title
-product['title'] = nokogiri.at_css('.ProductTitle').text.strip
+product['title'] = nokogiri.at_css('.search-result-gridview-items .search-result-product-title').text.strip
 
 #extract current price
 product['current_price'] = nokogiri.at_css('span.price-characteristic').attr('content').to_f
